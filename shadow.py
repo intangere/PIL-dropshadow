@@ -1,6 +1,6 @@
 from PIL import Image, ImageFilter, ImageOps
 
-def dropShadow( image, shadow=(255,255,255,255), offset=(0,0), background = (0,0,0,255), iterations=3):
+def dropShadow( image, shadow=(255,255,255,255), offset=(0,0), background = (0,0,0,255), iterations=3, radius=15):
 
   back = Image.open(sys.argv[1])
 
@@ -13,7 +13,7 @@ def dropShadow( image, shadow=(255,255,255,255), offset=(0,0), background = (0,0
 
   n = 0
   while n < iterations:
-    back = back.filter(ImageFilter.BoxBlur(15))
+    back = back.filter(ImageFilter.BoxBlur(radius))
     n += 1
 
   back.paste(image, offset, image)
