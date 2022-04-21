@@ -1,5 +1,5 @@
 # PIL-dropshadow
-Add a drop shadow or glow affect to an image using PIL.  
+Add a drop shadow or glow effect to an image using PIL.  
 
 The image must have an alpha layer for this to work (transparent background).  
 
